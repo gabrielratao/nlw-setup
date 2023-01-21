@@ -1,0 +1,170 @@
+/*selecionar todos os elementos html: */
+*{
+  /* removeu a margem da pagina */
+  margin: 0;
+  padding: 0;
+  /*descondidera o preenchimento interno */
+  box-sizing: border-box;
+}
+body{
+  background-color: black;
+  color: white;
+
+  /*colocar o habits no centro*/ 
+    /* disposição dos elementos dentro do body:*/
+    /*display: grid;*/
+    /* possibilita usar isso: */
+    /*place-items: center;*/
+  /*-=-=-=-==-=-=-=-=-=*/
+  
+  height: 100vh;
+  
+}
+
+header{
+  /*disopsição dos elementos (display) flex => dentro da caixa header*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 48px;
+
+  position: fixed;
+  width: 100%;
+  background-color: black;
+
+}
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+/*criou a borda ao redor de cada bloco html dentro de body
+o 1px é a grossura da borda*/
+/*se colocar sem o * vai pegar o bloco inteiro do body como uma coisa so,
+com o * ele pega cada elemento separado*/
+
+
+/*body *{ */
+/*  border: 1px solid red; */
+ /*margem ao redor da caixa */
+/*  margin: 24px; */
+ /*preenchimento interno*/
+/*  padding: 24px;*/
+/*}*/
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+/*trabalhar na caixa button, conforme o figma*/
+button{
+  /*16px => encima e embaixo E   24px => nas laterais*/
+  padding: 16px 24px;
+  /*arredondamento da borda*/
+  border-radius: 8px;
+  border: 1px solid #8B5CF6;
+  background-color: transparent;
+  color: white;
+  /*disposição dos elementos dentro de um elemento
+  que nesse caso é a imagem do + e o texto e 
+  utilizando a opçãp "flex" vai tirar da linha do bloco anterior 
+  possibilidando colcoar eles de qqr forma*/
+  display: flex;
+  align-items: center;
+  /*espaço entre elementos*/
+  gap: 12px;
+
+
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+
+}
+
+#form-habits {
+  display: flex;
+ 
+  /*cima laterais baixo*/
+  padding: 182px 48px 48px;
+
+  /*encaixe o conteudo na largura*/
+  width: fit-content;
+}
+
+.habits{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+
+}
+
+.habit{
+  
+  width: 64px;
+  height: 64px;
+
+  font-size: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.days{
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+}
+
+/*um bag abaixo do outro*/
+.day{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/*todo div dentro da caixa*/
+.day div{
+  margin-bottom: 8px;
+
+  font-family: 'Roboto Mono';
+  font-size: 20px;
+  line-height: 125%;
+  color: #A1A1AA;
+  text-align: center;
+}
+
+
+input{
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 64px;
+  height: 64px;
+
+  border: 2px solid #27272A;
+  border-radius: 8px;
+
+  background: #18181B;
+}
+/*se tiver marcado
+pseudo seletor*/
+input:checked{
+  background: #8B5CF6;
+  border: 2px solid #A78BFA;
+}
+
+
+
+/*ajustar a questao do botão que qnd diminui e tela ele fica se conterocendo
+e manter apenas o sinal de +*/
+
+/*max de largura que vai de 0 a 570px*/
+/*uma nova regra   responsividade em css*/
+@media (max-width: 570px){
+  button div{
+    display: none;
+  }
+}
+
+
+
